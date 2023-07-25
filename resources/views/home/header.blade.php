@@ -8,20 +8,32 @@
                   <div class="collapse navbar-collapse" id="navbarNav">
                      <ul class="navbar-nav">
                         <li class="nav-item">
-                           <a class="nav-link" href="index.html">Home</a>
+                           <a class="nav-link" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="services.html">Services</a>
+                           <a class="nav-link" href="{{ route('home') }}">Services</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link " href="blog.html">Blog</a>
+                           <a class="nav-link " href="{{ route('home.tools') }}">Tools</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link " href="contact.html">Contact</a>
+                           <a class="nav-link " href="{{ route('home.payment') }}">Payment</a>
                         </li>
+                        @if (Route::has('login'))
+                     @auth
+                     <li class="nav-item"><x-app-layout>
+   
+                    </x-app-layout></li>
+                     @else
+                     <li class="nav-item"><a class="nav-link " href="{{ route('login') }}">Login</a></li>
+                     @if (Route::has('register'))
+                     <li class="nav-item"><a class="nav-link " href="{{ route('register') }}">Registration</a></li>
+                     @endif
+                     @endauth
+                     @endif
                      </ul>
                   </div>
                </nav>
@@ -32,7 +44,7 @@
                   <ul>
                      <li class="active"><a href="{{ route('home') }}">Home</a></li>
                      <li><a href="about.html">About</a></li>
-                     <li><a href="services.html">Services</a></li>
+                     <li><a href="">Services</a></li>
                      <li><a href="{{ route('home.tools') }}">Tools</a></li>
                      <li><a href="{{ route('home.payment') }}">Payment</a></li>
                      @if (Route::has('login'))

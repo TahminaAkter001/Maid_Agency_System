@@ -12,22 +12,9 @@
                 <li class="active"><a href="{{ route('home')}}"> <i class="icon-home"></i>Home </a></li>
                 <li><a href="{{ route('agent.tables')}}"> <i class="icon-grid"></i>Tables </a></li>
                 <li><a href="{{ route('agent.charts')}}"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-                
-                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Tools </a>
-                  <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                    <li><a href="{{ route('agent.agentform')}}">Add Tools</a></li>
-                    <li><a href="{{ route('agent.agentform')}}">Tools Summary</a></li>
-                    <li><a href="{{ route('agent.agentform')}}">Approve Request</a></li>
-                  </ul>
-                </li>
-                <li><a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse"> <i class="icon-windows"></i>Example dropdown </a>
-                  <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
-                    <li><a href="#">Page</a></li>
-                  </ul>
-                </li>
-                <li><a href="login.html"> <i class="icon-logout"></i>Login page </a></li>
+                <li><a href="{{ route('agent.agentform')}}"> <i class="icon-padnote"></i>Forms </a></li>
+                <li><a href="{{ route('agent.agenttool')}}"> <i class="icon-padnote"></i>Tools </a></li>
+                <li><a href="{{ route('login')}}"> <i class="icon-logout"></i>Login page </a></li>
         </ul><span class="heading">Extras</span>
         <ul class="list-unstyled">
           <li> <a href="#"> <i class="icon-settings"></i>Demo </a></li>

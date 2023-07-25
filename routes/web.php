@@ -23,11 +23,12 @@ use App\Http\Controllers\AgentFormController;
 Route::get('/', [HomeController::class, 'homepage']); 
  
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
-Route::get('/home/tools', [ToolsController::class, 'tool'])->middleware('auth')->name('home.tools');
+Route::get('/home/tool', [ToolsController::class, 'tool'])->middleware('auth')->name('agent.agenttool');
 Route::get('/home/payment', [PaymentController::class, 'payment'])->middleware('auth')->name('home.payment');
 Route::get('/home/tables', [AgentTableController::class, 'tables'])->middleware('auth')->name('agent.tables');
 Route::get('/home/charts', [AgentChartsController::class, 'chart'])->middleware('auth')->name('agent.charts');
 Route::get('/home/form', [AgentFormController::class, 'form'])->middleware('auth')->name('agent.agentform');
+
 
 
 /*Route::get('/dashboard', function () {
@@ -41,3 +42,4 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+

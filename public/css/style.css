@@ -231,11 +231,15 @@ button {
 .header_section {
     width: 100%;
     float: left;
-    background-image: url(../images/banner-bg.png);
+    background-image: url(../images/banner.jpg);
     height: auto;
     background-size: 100%;
     padding: 0px 0px 20px 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:800px;
 }
+
 
 .bg-light {
     background-color: transparent !important;
@@ -264,7 +268,7 @@ button {
 .navbar-light .navbar-nav .nav-link {
     font-size: 18px;
     text-transform: uppercase;
-    color: #fff;
+    color: #000;
 }
 
 .navbar-nav {
@@ -313,14 +317,15 @@ button {
     text-transform: uppercase;
     padding-top: 10px;
     padding-bottom: 10px;
-    color: #fff;
+    color: #000;
     border-radius: 40px;
 }
 
 .menu_main li a {
-    color: #ffffff;
+    color: #000;
     padding: 10px 20px;
     border-radius: 10px;
+    font-weight:bold;
 }
 
 .menu_main li a:hover {
@@ -358,7 +363,7 @@ button {
     width: 100%;
     float: left;
     font-size: 80px;
-    color: #ffffff;
+    color: #181818;
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
@@ -369,7 +374,7 @@ button {
     width: 63%;
     margin: 0 auto;
     font-size: 16px;
-    color: #ffffff;
+    color: #312f2f;
     text-align: center;
 }
 
@@ -415,6 +420,8 @@ button {
     font-size: 40px;
     color: #1f1f1f;
     font-weight: bold;
+    margin:0;
+    text-align:center;
 }
 
 .services_text {
@@ -423,6 +430,7 @@ button {
     font-size: 16px;
     color: #1f1f1f;
     margin: 0px;
+    text-align:center;
 }
 
 .services_section_2 {
