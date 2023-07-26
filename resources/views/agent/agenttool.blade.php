@@ -15,6 +15,9 @@
             margin: 4px 2px;
             cursor: pointer;
         }
+        .center{
+          align: center;
+        }
 
     </style>
 
@@ -25,12 +28,11 @@
       <!-- Sidebar Navigation end-->
       <div class="page-content">
         <div class="addTool">
-            <button class="success">Add new Tool</button>
+            <button class="success"><a href="{{route('agent.addtool')}}">Add new Tool</a> </button>
         </div>
 <!------your code here--->
+       
 
-
-    </div>
 
       @include('agent.footer')
       </div>

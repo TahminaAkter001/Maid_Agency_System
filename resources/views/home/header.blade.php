@@ -17,7 +17,7 @@
                            <a class="nav-link" href="{{ route('home') }}">Services</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link " href="{{ route('home.tools') }}">Tools</a>
+                           <a class="nav-link " href="">Tools</a>
                         </li>
                         <li class="nav-item">
                            <a class="nav-link " href="{{ route('home.payment') }}">Payment</a>
@@ -45,7 +45,7 @@
                      <li class="active"><a href="{{ route('home') }}">Home</a></li>
                      <li><a href="about.html">About</a></li>
                      <li><a href="">Services</a></li>
-                     <li><a href="{{ route('home.tools') }}">Tools</a></li>
+                     <li><a href="">Tools</a></li>
                      <li><a href="{{ route('home.payment') }}">Payment</a></li>
                      @if (Route::has('login'))
                      @auth

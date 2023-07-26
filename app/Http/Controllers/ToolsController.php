@@ -6,7 +6,9 @@ use Illuminate\Http\Request;
 
 class ToolsController extends Controller
 {
-    public function tool(){
+
+    public function AgentTool(){
         return view('agent.agenttool');
     }
+    
 }
