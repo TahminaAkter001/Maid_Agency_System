@@ -46,3 +46,4 @@ require __DIR__.'/auth.php';
 Route::get('/addtools', [AgentAddToolController::class, 'addtools']);
 Route::post('/add_post', [AgentAddToolController::class, 'add_post']);
 Route::get('/show_post', [AgentAddToolController::class, 'show_post']);
+Route::get('/tools', [ToolsController::class, 'tools']);

@@ -45,8 +45,9 @@
                      <li class="active"><a href="{{ route('home') }}">Home</a></li>
                      <li><a href="about.html">About</a></li>
                      <li><a href="">Services</a></li>
-                     <li><a href="">Tools</a></li>
+                     <li><a href="{{ url('/tools')}}">Tools</a></li>
                      <li><a href="{{ route('home.payment') }}">Payment</a></li>
+                     
                      @if (Route::has('login'))
                      @auth
                      <li><x-app-layout>
@@ -59,6 +60,7 @@
                      @endif
                      @endauth
                      @endif
+                     <li><a href="about.html">Cart</a></li>
                   </ul>
                </div>
             </div>

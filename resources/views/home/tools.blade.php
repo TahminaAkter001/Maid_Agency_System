@@ -1,11 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>Picked Fresh</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content=""> 
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="../Vegetable/css/bootstrap.min.css">
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="../Vegetable/css/style.css">
+<!-- Responsive-->
+<link rel="stylesheet" href="../Vegetable/css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="../Vegetable/images/fevicon.png" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="../Vegetable/css/jquery.mCustomScrollbar.min.css">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="../Vegetable/css/owl.carousel.min.css">
+<link rel="stylesheet" href="../Vegetable/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 </head>
 <body>
-    <h1>Tools</h1>
+
+<style>
+    .img_des{
+        height:300px;
+        width:250px;
+        padding:10px;
+    }
+</style>
+
+<div class="vegetables_section layout_padding">
+    <div class="container">
+      <div class="image_2"><img src="../Vegetable/images/img-2.png"></div>
+      <h1 class="about_taital">Tools for Borrow</h1>
+      <p class="lorem_text">Reader will be distracted by the readable content of a</p>
+      <div class="vegetables_section_2 layout_padding">
+        <div class="row">
+            @foreach($post as $post)
+          <div class="col-4">
+            <div class="box_section">
+              <div class="image_4"><img class="img_des" src="ProductImage/{{$post->image}}"></div>
+              <h2 class="dolor_text">$<span style="color: #ebc30a;">{{ $post->p_price}}</span></h2>
+              <h2 class="dolor_text">{{ $post->p_name}}</h2>
+              <div class="buy_bt_1 active"><a href="#">Add Cart</a></div>
+            </div>
+          </div>
+          
+       
+          @endforeach
+        </div>
+      </div>
+      <div class="read_bt_1"><a href="#">Read More</a></div>
+    </div>
+  </div>
+  <!-- Javascript files-->
+  <script src="../Vegetable/js/jquery.min.js"></script>
+  <script src="../Vegetable/js/popper.min.js"></script>
+  <script src="../Vegetable/js/bootstrap.bundle.min.js"></script>
+  <script src="../Vegetable/js/jquery-3.0.0.min.js"></script>
+  <script src="../Vegetable/js/plugin.js"></script>
+  <!-- sidebar -->
+  <script src="../Vegetable/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../Vegetable/js/custom.js"></script>
+  <!-- javascript --> 
+  <script src="../Vegetable/js/owl.carousel.js"></script>
+  <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
 </html>
