@@ -6,10 +6,18 @@ use Illuminate\Http\Request;
 use App\Models\AddTool;
 
 class AgentAddToolController extends Controller
-{
-    public function AgentAddTool(){
+{    
+    
+    public function show_post(){
+        $post = AddTool::all();
+        return view('agent.agenttool', compact('post'));
+    }
+    public function addtools(){
         return view('agent.addtool');
     }
+
+
+    
 
     public function add_post(Request $request){
         $post = new AddTool;
@@ -28,8 +36,9 @@ class AgentAddToolController extends Controller
 
 
         $post-> save();
-        return redirect()->back()->with('message','New Products Added Successfully!');
+        return redirect()->back();
 
 
     }
+
 }

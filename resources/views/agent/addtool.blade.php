@@ -29,7 +29,7 @@
       <div class="page-content">
 
         <div class="addTool">
-            <button class="success"><a href="{{route('agent.agenttool')}}">View Tools</a> </button>
+            <button class="success"><a href="{{url('/show_post')}}">View Tools</a> </button>
         </div>
 <!------your code here--->
         <!-- Horizontal Form-->

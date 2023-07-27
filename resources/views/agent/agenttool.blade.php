@@ -18,6 +18,14 @@
         .center{
           align: center;
         }
+        .img_deg{
+          height:100px;
+          width:150px;
+          padding:10px;
+        }
+        .block{
+          width:100%!important;
+        }
 
     </style>
 
@@ -28,11 +36,46 @@
       <!-- Sidebar Navigation end-->
       <div class="page-content">
         <div class="addTool">
-            <button class="success"><a href="{{route('agent.addtool')}}">Add new Tool</a> </button>
+            <button class="success"><a href="{{url('/addtools')}}">Add new Tool</a> </button>
         </div>
 <!------your code here--->
        
+<div class="col-lg-12">
+                <div class="block">
+                  <div class="title"><strong>Product Table</strong></div>
+                  <div class="table-responsive"> 
+                    <table class="table table-striped table-sm">
+                      <thead>
+                        <tr>
+                          <th>Name</th>
+                          <th>Image</th>
+                          <th>Price</th>
+                          <th>Details</th>
+                          <th>Quantity</th>
+                          
+                        </tr>
+                      </thead>
 
+                      
+                      <tbody>
+                      @foreach($post as $post)
+                        <tr>
+                          
+                          <td>{{ $post->p_name}}</td>
+                          <td>
+                            <img class="img_deg" src="ProductImage/{{ $post->image}}" alt="">
+                          </td>
+                          <td>{{ $post->p_price}}</td>
+                          <td>{{ $post->p_details}}</td>
+                          <td>{{ $post->p_quantity}}</td>
+                        </tr>
+                        @endforeach
+                      </tbody>
+                      
+                    </table>
+                  </div>
+                </div>
+              </div>
 
       @include('agent.footer')
       </div>

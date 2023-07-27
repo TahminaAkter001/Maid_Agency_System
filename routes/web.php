@@ -24,8 +24,7 @@ use App\Http\Controllers\AgentFormController;
 Route::get('/', [HomeController::class, 'homepage']); 
  
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
-Route::get('/home/tools', [ToolsController::class, 'AgentTool'])->middleware('auth')->name('agent.agenttool');
-Route::get('/home/addtools', [AgentAddToolController::class, 'AgentAddTool'])->middleware('auth')->name('agent.addtool');
+
 Route::get('/home/payment', [PaymentController::class, 'payment'])->middleware('auth')->name('home.payment');
 Route::get('/home/tables', [AgentTableController::class, 'tables'])->middleware('auth')->name('agent.tables');
 Route::get('/home/charts', [AgentChartsController::class, 'chart'])->middleware('auth')->name('agent.charts');
@@ -44,5 +43,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
-
+Route::get('/addtools', [AgentAddToolController::class, 'addtools']);
 Route::post('/add_post', [AgentAddToolController::class, 'add_post']);
+Route::get('/show_post', [AgentAddToolController::class, 'show_post']);

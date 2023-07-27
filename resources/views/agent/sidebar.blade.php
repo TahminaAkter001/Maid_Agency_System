@@ -13,7 +13,7 @@
                 <li><a href="{{ route('agent.tables')}}"> <i class="icon-grid"></i>Tables </a></li>
                 <li><a href="{{ route('agent.charts')}}"> <i class="fa fa-bar-chart"></i>Charts </a></li>
                 <li><a href="{{ route('agent.agentform')}}"> <i class="icon-padnote"></i>Forms </a></li>
-                <li><a href="{{ route('agent.agenttool')}}"> <i class="icon-padnote"></i>Tools </a></li>
+                <li><a href="{{ url('/show_post')}}"> <i class="icon-padnote"></i>Tools </a></li>
                 <li><a href="{{ route('login')}}"> <i class="icon-logout"></i>Login page </a></li>
         </ul><span class="heading">Extras</span>
         <ul class="list-unstyled">
