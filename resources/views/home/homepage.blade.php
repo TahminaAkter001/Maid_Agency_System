@@ -21,11 +21,7 @@
       <!-- about section start -->
       @include('home.about')
       <!-- about section end -->
-      
-      <!-- client section start -->
-        @include('home.client')
-      
-      <!-- choose section end -->
+      @include('home.contact')
       <!-- footer section start -->
       @include('home.footer')
       <!-- copyright section end -->

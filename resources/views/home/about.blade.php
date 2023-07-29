@@ -1,3 +1,11 @@
+<style>
+   .about_img{
+      height:600px;
+      width:600px;
+      margin-left:20px;
+   }
+</style>
+
 <div class="about_section layout_padding">
          <div class="container-fluid">
             <div class="row">
@@ -9,7 +17,7 @@
                   </div>
                </div>
                <div class="col-md-6 padding_right_0">
-                  <div><img src="images/about-img.png" class="about_img"></div>
+                  <div><img src="images/Maid_Philippines.jpg" class="about_img"></div>
                </div>
             </div>
          </div>
