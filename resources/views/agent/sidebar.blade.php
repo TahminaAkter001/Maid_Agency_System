@@ -10,10 +10,9 @@
         <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
         <ul class="list-unstyled">
                 <li class="active"><a href="{{ route('home')}}"> <i class="icon-home"></i>Home </a></li>
-                <li><a href="{{ route('agent.tables')}}"> <i class="icon-grid"></i>Tables </a></li>
-                <li><a href="{{ route('agent.charts')}}"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-                <li><a href="{{ route('agent.agentform')}}"> <i class="icon-padnote"></i>Forms </a></li>
-                <li><a href="{{ url('/show_post')}}"> <i class="icon-padnote"></i>Tools </a></li>
+                <li><a href="{{ url('/show_service')}}"> <i class="icon-grid"></i>Services </a></li>
+                <li><a href="{{ url('/show_maid')}}"> <i class="fa fa-bar-chart"></i>Maids </a></li>
+                <li><a href="{{ url('/show_post')}}"> <i class="icon-padnote"></i>Tool Management </a></li>
                 <li><a href="{{ route('login')}}"> <i class="icon-logout"></i>Login page </a></li>
         </ul><span class="heading">Extras</span>
         <ul class="list-unstyled">

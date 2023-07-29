@@ -32,7 +32,7 @@ class AgentAddToolController extends Controller
         $request->image->move('ProductImage', $imagename);
         $post-> image = $imagename;
 
-        $post-> p_name = $request->p_name;
+    
 
 
         $post-> save();
