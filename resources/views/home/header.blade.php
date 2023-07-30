@@ -144,7 +144,7 @@
                      @endif
                      @endauth
                      @endif
-                     <li><a href="about.html">Cart</a></li>
+                     <li><a href="{{ url('/cart') }}">Cart</a></li>
                   </ul>
                </div>
             </div>

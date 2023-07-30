@@ -11,6 +11,7 @@ use App\Http\Controllers\AgentChartsController;
 use App\Http\Controllers\AgentFormController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\MaidController;
+use App\Http\Controllers\CartController;
 
 /*
 |--------------------------------------------------------------------------
@@ -49,11 +50,15 @@ Route::get('/addtools', [AgentAddToolController::class, 'addtools'])->middleware
 Route::post('/add_post', [AgentAddToolController::class, 'add_post'])->middleware('auth');
 Route::get('/show_post', [AgentAddToolController::class, 'show_post'])->middleware('auth');
 Route::get('/tools', [ToolsController::class, 'tools'])->middleware('auth');
-/***Services */
+/*** agent Services */
 Route::get('/show_service', [ServiceController::class, 'show_service'])->middleware('auth');
 Route::post('/add_spost', [ServiceController::class, 'add_spost'])->middleware('auth');
 Route::get('/add_service', [ServiceController::class, 'add_service'])->middleware('auth');
-/***Maid *** */
+/***Agent Maid *** */
 Route::get('/show_maid', [MaidController::class, 'show_maid'])->middleware('auth');
 Route::post('/add_mpost', [MaidController::class, 'add_mpost'])->middleware('auth');
 Route::get('/add_maid', [MaidController::class, 'add_maid'])->middleware('auth');
+
+/***cart*** */
+Route::get('/cart', [CartController::class, 'cart'])->middleware('auth');
+Route::get('/checkout', [CartController::class, 'checkout'])->middleware('auth');

@@ -8,6 +8,10 @@
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.1);
 }
 
+.section-title p{
+  margin-bottom:20px;
+}
+
 .contact .info i {
   font-size: 20px;
   color: #47b2e4;
@@ -186,51 +190,20 @@
   }
 }
 
-/****Section */
 .section-title {
-  text-align: center;
-  padding-bottom: 30px;
+    width: 100%;
+    float: left;
+    font-size: 40px;
+    color: #1f1f1f;
+    font-weight: bold;
+    margin: 0;
+    text-align: center;
 }
-
-.section-title h2 {
-  font-size: 32px;
+.section-title h2{
   font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
-  position: relative;
-  color: #37517e;
-}
-
-.section-title h2::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 120px;
-  height: 1px;
-  background: #ddd;
-  bottom: 1px;
-  left: calc(50% - 60px);
-}
-
-.section-title h2::after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 40px;
-  height: 3px;
-  background: #47b2e4;
-  bottom: 0;
-  left: calc(50% - 20px);
-}
-
-.section-title p {
-  margin-bottom: 0;
 }
 
 </style>
-
-
 
 <!-- ======= Contact Section ======= -->
 <section id="contact" class="contact">
