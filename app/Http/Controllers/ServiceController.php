@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Services;
+use App\Models\Maid;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -27,8 +28,13 @@ class ServiceController extends Controller
     
             $service-> save();
             return redirect()->back();
-    
-    
-        
+     
     }
+    public function service_type($slug){
+        
+        $service = Services::where('slug', $slug)->firstOrFail();
+        $post = Maid::where('serv_id', $service->id)->get();
+        return view('home.services', compact('service', 'post'));
+    }
+    
 }

@@ -38,6 +38,10 @@
         height:300px;
         width:250px;
         padding:10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
     }
 
     /* header section start */
@@ -160,6 +164,12 @@
     background-size: 100%;
     padding: 10px 0px 0px 0px;
 }
+.container-fluid{
+    width:80%;
+}
+.buy_bt_1 a{
+    margin-top:10px;
+}
 
 
 /* header section end */
@@ -169,7 +179,7 @@
 @include('home.header')
 
 <div class="vegetables_section layout_padding">
-    <div class="container">
+    <div class="container-fluid">
       <div class="image_2"><img src=""></div>
       <h1 class="about_taital">Tools for Borrow</h1>
       <p class="lorem_text">Reader will be distracted by the readable content of a</p>
@@ -179,7 +189,7 @@
           <div class="col-4">
             <div class="box_section">
               <div class="image_4"><img class="img_des" src="ProductImage/{{$post->image}}"></div>
-              <h2 class="dolor_text">$<span style="color: #ebc30a;">{{ $post->p_price}}</span></h2>
+              <h2 class="dolor_text"><span style="color: #ebc30a;">{{ $post->p_price}}</span> Taka</h2>
               <h2 class="dolor_text">{{ $post->p_name}}</h2>
               <div class="buy_bt_1 active"><a href="#">Add Cart</a></div>
             </div>

@@ -16,6 +16,11 @@ return new class extends Migration
             $table->string('serv_id')->nullable();
             $table->string('name')->nullable();
             $table->string('slug')->nullable();
+            $table->string('age')->nullable();
+            $table->string('nationality')->nullable();
+            $table->string('gander')->nullable();
+            $table->string('experience')->nullable();
+            $table->string('contact')->nullable();
             $table->longText('details')->nullable();
             $table->string('salary')->nullable();
             $table->string('image')->nullable();

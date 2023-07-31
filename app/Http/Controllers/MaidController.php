@@ -43,4 +43,9 @@ class MaidController extends Controller
 
     
 }
+public function maid_details($id){
+    $post = Maid::where('id', $id)->firstOrFail();;
+ return view('home.maid_details', compact('post'));
+}
+
 }

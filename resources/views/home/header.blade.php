@@ -117,15 +117,14 @@
                <div class="menu_main">
                   <ul>
                      <li class="active"><a href="{{ route('home') }}">Home</a></li>
-                     <li><a href="about.html">About</a></li>
 
                      <ul>
-              <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-right"></i></a>
+              <li class="dropdown"><a href="#"><span>Services</span></i></a>
                 <ul>
-                  <li><a href="#">Cleaning</a></li>
-                  <li><a href="#">Cooking</a></li>
-                  <li><a href="#">Nanny</a></li>
-                  <li><a href="#">Washing</a></li>
+                  <li><a href="{{ route('home.services',['slug' => 'cleaning']) }}">Cleaning</a></li>
+                  <li><a href="{{ route('home.services',['slug' => 'cooking']) }}">Cooking</a></li>
+                  <li><a href="{{ route('home.services',['slug' => 'nanny']) }}">Nanny</a></li>
+                  <li><a href="{{ route('home.services',['slug' => 'car-washing']) }}">Car Washing</a></li>
                 </ul>
               </li>
 
@@ -144,7 +143,7 @@
                      @endif
                      @endauth
                      @endif
-                     <li><a href="{{ url('/cart') }}">Cart</a></li>
+                     <li><a href="{{ url('/cart') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>
                   </ul>
                </div>
             </div>

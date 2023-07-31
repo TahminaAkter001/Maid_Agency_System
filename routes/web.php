@@ -62,3 +62,8 @@ Route::get('/add_maid', [MaidController::class, 'add_maid'])->middleware('auth')
 /***cart*** */
 Route::get('/cart', [CartController::class, 'cart'])->middleware('auth');
 Route::get('/checkout', [CartController::class, 'checkout'])->middleware('auth');
+/**user service */
+Route::get('/service_type/{slug}', [ServiceController::class, 'service_type'])->middleware('auth')->name('home.services');
+
+/**maid details */
+Route::get('/maid_details/{id}', [MaidController::class, 'maid_details'])->middleware('auth')->name('home.maid_details');

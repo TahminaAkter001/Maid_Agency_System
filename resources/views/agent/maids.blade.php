@@ -50,6 +50,11 @@
                           <th>Service type</th>
                           <th>Name</th>
                           <th>Slug</th>
+                          <th>Age</th>
+                          <th>Nationality</th>
+                          <th>Gander</th>
+                          <th>Experience</th>
+                          <th>Contact</th>
                           <th>Image</th>
                           <th>Salary</th>
                           <th>NID</th>
@@ -65,6 +70,11 @@
                           <td>{{ $post->service->name}}</td>
                           <td>{{ $post->name}}</td>
                           <td>{{ $post->slug}}</td>
+                          <td>{{ $post->age}}</td>
+                          <td>{{ $post->nationality}}</td>
+                          <td>{{ $post->gander}}</td>
+                          <td>{{ $post->experience}}</td>
+                          <td>{{ $post->contact}}</td>
                           <td>
                             <img class="img_deg" src="Maid/{{ $post->image}}" alt="">
                           </td>

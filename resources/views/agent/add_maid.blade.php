@@ -66,9 +66,40 @@
                         <label class="col-sm-3 form-control-label">Slug</label>
                         <div class="col-sm-9">
                           <input id="inputHorizontalSuccess" type="text" name="slug" placeholder="Enter slug" class="form-control form-control-success">
+                        
+                      </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Age</label>
+                        <div class="col-sm-9">
+                          <input id="inputHorizontalSuccess" type="text" name="age" placeholder="Enter age" class="form-control form-control-success">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Nationality</label>
+                        <div class="col-sm-9">
+                          <input id="inputHorizontalSuccess" type="text" name="nationality" placeholder="Enter nationality" class="form-control form-control-success">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Gander</label>
+                        <div class="col-sm-9">
+                          <input id="inputHorizontalSuccess" type="text" name="gander" placeholder="Enter gender" class="form-control form-control-success">
                         </div>
                       </div>
 
+                      <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Experience</label>
+                        <div class="col-sm-9">
+                          <input id="inputHorizontalSuccess" type="text" name="experience" placeholder="Enter Year of exp." class="form-control form-control-success">
+                        </div>
+                        </div>
+                      <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Contact No</label>
+                        <div class="col-sm-9">
+                          <input id="inputHorizontalSuccess" type="text" name="contact" placeholder="Enter Year of exp." class="form-control form-control-success">
+                        </div>
+                        </div>
                       <div class="form-group row">
                         <label class="col-sm-3 form-control-label">Details</label>
                         <div class="col-sm-9">
