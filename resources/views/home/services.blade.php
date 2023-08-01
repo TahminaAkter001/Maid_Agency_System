@@ -1,158 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Document</title>
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-<!----font awesome cdn--->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- basic -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- mobile metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+<!-- site metas -->
+<title>Borrow Tools</title>
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="author" content=""> 
+<!-- bootstrap css -->
+<link rel="stylesheet" type="text/css" href="../Vegetable/css/bootstrap.min.css">
+<!-- style css -->
+<link rel="stylesheet" type="text/css" href="../Vegetable/css/style.css">
+<!-- Responsive-->
+<link rel="stylesheet" href="../Vegetable/css/responsive.css">
+<!-- fevicon -->
+<link rel="icon" href="../Vegetable/images/fevicon.png" type="image/gif" />
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="../Vegetable/css/jquery.mCustomScrollbar.min.css">
+<!-- Tweaks for older IEs-->
+<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<!-- owl stylesheets --> 
+<link rel="stylesheet" href="../Vegetable/css/owl.carousel.min.css">
+<link rel="stylesheet" href="../Vegetable/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
-
-   
 </head>
-
 <body>
 
-   <style>
-      body {
-    margin: 0;
-    font-family: Roboto,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    font-size: .8125rem;
-    font-weight: 400;
-    line-height: 1.5385;
-    color: #333;
-    text-align: left;
-    background-color: #2196F3;
+<style>
+    
+    .img_des{
+        height:300px;
+        width:250px!important;
+        padding:10px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+    }
+
+    /* header section start */
+
+.header_section {
+    width: 100%;
+    float: left;
+    background-image: url(../images/banner.jpg);
+    height: auto;
+    background-size: 100%;
+    padding: 0px 0px 20px 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height:800px;
 }
 
-.mt-50{
 
-    margin-top: 50px;
+.bg-light {
+    background-color: green;
 }
 
-.mb-50{
-
-    margin-bottom: 50px;
+.logo {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 20px 0px 50px 0px;
 }
 
+.logo_mobile {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding-bottom: 20px;
+}
 
+.mobile_menu {
+    width: 100%;
+    float: left;
+    display: none;
+}
 
-.card {
+.navbar-light .navbar-nav .nav-link {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+}
+
+.navbar-nav {
+    align-items: center;
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.nav-item {
     position: relative;
-    display: -ms-flexbox;
-    display: flex;
+}
+
+.menu_main {
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0,0,0,.125);
-    border-radius: .1875rem;
-}
-
-.card-img-actions {
-    position: relative;
-}
-.card-body {
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 1.25rem;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    width: 100%;
     text-align: center;
+    margin: 0 auto;
+}
+.box_section {
+    width: 100%;
+    float: left;
+    background-color: #728761;
+}
+.vegetables_section {
+    background-color: #75b65c94;
 }
 
-.card-img{
-
-    width: 350px;
+.menu_main ul {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    display: inline-flex;
 }
 
-.star{
-        color: red;
-}
-.heading{
-    color:white;
-    text-align:center;
-    font-family: 'Poppins', sans-serif;
-}
-
-.bg-cart {
-    background-color:orange;
-    color:#fff;
+.menu_main li {
+    float: left;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000;
+    border-radius: 40px;
 }
 
-.bg-cart:hover {
-    
-    color:#fff;
+.menu_main li a {
+    color: #000;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight:bold;
 }
 
-.bg-buy {
-    background-color:green;
-    color:#fff;
-    padding-right: 29px;
-}
-.bg-buy:hover {
-    
-    color:#fff;
+.menu_main li a:hover {
+    color: #ffffff;
+    background-color: #2b2278;
 }
 
-a{
-
-    text-decoration: none !important;
+.mb-lg-0,
+.my-lg-0 {
+    margin-bottom: 0!important;
+    width: 20%;
+    float: left;
 }
-.star{
-    color:yellow;
-    font-size:17px;
-}
-   </style>
-<h1 class="heading">Products in {{ $service->name }}</h1>
-<div class="container d-flex justify-content-center mt-50 mb-50">
 
+.header_main {
+    width: 100%;
+    background-image: url(../images/header-bg.png);
+    background-size: 100%;
+    padding: 10px 0px 0px 0px;
+    background-color:#75b65c94;
+}
+.container-fluid{
+    width:70%;
+}
+.buy_bt_1 a{
+    margin-top:10px;
+}
+
+
+/* header section end */
+</style>
+
+
+@include('home.header')
+<div class="vegetables_section layout_padding">
+    <div class="container-fluid">
+      <div class="image_2"><img src=""></div>
+      <h1 class="about_taital">Products in {{ $service->name }}</h1>
+      <p class="lorem_text">Reader will be distracted by the readable content of a</p>
+      <div class="vegetables_section_2 layout_padding">
         <div class="row">
             @foreach($post as $post)
-           <div class="col-md-4 mt-2">
-           
-                
-<div class="card">
-   <div class="card-body">
-      <div class="card-img-actions">
-     <img src="../Maid/{{ $post->image}}" width="240" height="250" alt="">
-     </div>
-       </div>
-           <div class="card-body bg-light text-center">
-         <div class="mb-2">
-          <h6 class="font-weight-semibold mb-2">
-             <a href="#" class="text-default mb-2" data-abc="true">{{ $post->name}}</a>
-                </h6>
-                 </div>
-
-                  <h3 class="mb-0 font-weight-semibold">{{ $post->salary}} Taka</h3>
-                 <div>
-                 <i class="fa fa-star star"></i>
-                 <i class="fa fa-star star"></i>
-                    <i class="fa fa-star star"></i>
-                    <i class="fa fa-star star"></i>
-                 </div>
-           <div class="text-muted mb-3">34 reviews</div>
-           
-             <button type="button" class="btn bg-cart"></i><a href="{{ route('home.maid_details', ['id' => $post->id]) }}"> Details</a></button>
-            
-            
+          <div class="col-4">
+            <div class="box_section">
+              <div class="image_4"><img class="img_des" src="../Maid/{{ $post->image}}"></div>
+              <h1 class="dolor_text">{{ $post->name}}</h1>
+              <h2 class="dolor_text"><span style="color: #ebc30a;">{{ $post->salary}}</span> Taka</h2>
+              
+              <div class="buy_bt_1 active"><a href="{{ route('home.maid_details', ['id' => $post->id]) }}">Details</a></div>
             </div>
-                     </div>
-                     </div> 
-
-                    @endforeach
- 
+          </div>
+          
+       
+          @endforeach
+        </div>
+</div>
     </div>
-    </div>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></script>
+  </div>
+  <!-- Javascript files-->
+  <script src="../Vegetable/js/jquery.min.js"></script>
+  <script src="../Vegetable/js/popper.min.js"></script>
+  <script src="../Vegetable/js/bootstrap.bundle.min.js"></script>
+  <script src="../Vegetable/js/jquery-3.0.0.min.js"></script>
+  <script src="../Vegetable/js/plugin.js"></script>
+  <!-- sidebar -->
+  <script src="../Vegetable/js/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script src="../Vegetable/js/custom.js"></script>
+  <!-- javascript --> 
+  <script src="../Vegetable/js/owl.carousel.js"></script>
+  <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
 </body>
 </html>
+
+
+

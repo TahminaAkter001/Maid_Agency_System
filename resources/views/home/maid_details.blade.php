@@ -1,69 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maid Details</title>
-    <!-- bootstrap css -->
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <!-- fonts -->
-      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Righteous&display=swap" rel="stylesheet">
-      <!-- owl stylesheets --> 
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!--fontawesome--->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-<body>
-    @include('home.header')
+   <head>
+      <!-- basic -->
+      
+      @include('home.homecss')
+      <title>Maid Details</title>
+
+    </head>
+   <body>
+      <!-- header section start -->
+      
+         @include('home.header')
+
+    
     <style>
-        body {
+        h2{
+            font-size:28px;
+        }
+        h4, h6{
+            font-size:20px;
+        }
+    body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 24px;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-nav li {
-    display: inline-block;
-    margin-right: 20px;
-}
-
-nav li a {
-    color: #fff;
-    text-decoration: none;
-}
-
 section.maid-details {
     display: flex;
     margin: 20px;
@@ -115,6 +77,9 @@ button {
     padding: 10px 20px;
     cursor: pointer;
 }
+.container{
+    width:40%;
+}
 
 footer {
     background-color: #333;
@@ -122,10 +87,13 @@ footer {
     text-align: center;
     padding: 10px;
 }
+.appoint{
+    margin-top:20px;
+}
     </style>
-
+<div class="container">
     <section class="maid-details">
-        
+     
         <div class="maid-photo">
             <img src="../Maid/{{ $post->image}}" alt="Maid Photo">
         </div>
@@ -134,11 +102,12 @@ footer {
             <p><strong>Age:</strong> {{ $post->age}}</p>
             <p><strong>Nationality:</strong> {{ $post->nationality}}</p>
             <p><strong>Experience:</strong> {{ $post->experience}}</p>
-            <p><strong>Salary:</strong> {{ $post->salary}}</p>
+            <p><strong>Salary:</strong> {{ $post->salary}} Taka</p>
             <p><strong>Contact No:</strong> {{ $post->contact}}</p>
             <p><strong>NID No:</strong> {{ $post->nid}}</p>
             <h4>Description</h4>
             <p>{{ $post->details}}</p>
+            <button class="appoint">Appoint</button>
         </div>
         
     </section>
@@ -149,7 +118,7 @@ footer {
             <p class="comment">The maid was excellent. Very efficient and polite. Highly recommended!</p>
             <p class="date">Posted on July 28, 2023</p>
         </div>
-        <!-- Add more review cards as needed -->
+          
     </section>
     <section class="comments">
         <h2>Leave a Comment</h2>
@@ -160,12 +129,14 @@ footer {
             <button type="submit">Submit</button>
         </form>
     </section>
+    </div>
     <footer>
-        <p>&copy; 2023 Your Agency. All rights reserved.</p>
+        <p>&copy; 2023 Maid Agency. All rights reserved.</p>
     </footer>
-
-
-    <script src="js/jquery.min.js"></script>
+     
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
@@ -175,6 +146,6 @@ footer {
       <script src="js/custom.js"></script>
       <!-- javascript --> 
       <script src="js/owl.carousel.js"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script> 
-</body>
+      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>    
+   </body>
 </html>

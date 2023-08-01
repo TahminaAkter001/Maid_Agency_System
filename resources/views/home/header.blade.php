@@ -84,9 +84,6 @@
                            <a class="nav-link" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="about.html">About</a>
-                        </li>
-                        <li class="nav-item">
                            <a class="nav-link" href="{{ route('home') }}">Services</a>
                            
                         </li>
