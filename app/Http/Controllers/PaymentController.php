@@ -2,14 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class PaymentController extends Controller
 {
-    public function payment(){
+    public function payment()
+    {
         return view('home.payment');
     }
-
-
-    
 }

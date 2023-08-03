@@ -1,17 +1,17 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
-use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AgentAddToolController;
-use App\Http\Controllers\ToolsController;
-use App\Http\Controllers\PaymentController;
-use App\Http\Controllers\AgentTableController;
 use App\Http\Controllers\AgentChartsController;
 use App\Http\Controllers\AgentFormController;
-use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\MaidController;
+use App\Http\Controllers\AgentTableController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MaidController;
+use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ToolsController;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,15 +24,11 @@ use App\Http\Controllers\CartController;
 |
 */
 
-Route::get('/', [HomeController::class, 'homepage']); 
- 
+Route::get('/', [HomeController::class, 'homepage']);
+
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
 
 Route::get('/home/payment', [PaymentController::class, 'payment'])->middleware('auth')->name('home.payment');
-Route::get('/home/tables', [AgentTableController::class, 'tables'])->middleware('auth')->name('agent.tables');
-Route::get('/home/charts', [AgentChartsController::class, 'chart'])->middleware('auth')->name('agent.charts');
-Route::get('/home/form', [AgentFormController::class, 'form'])->middleware('auth')->name('agent.agentform');
-
 
 
 /*Route::get('/dashboard', function () {
@@ -67,3 +63,5 @@ Route::get('/service_type/{slug}', [ServiceController::class, 'service_type'])->
 
 /**maid details */
 Route::get('/maid_details/{id}', [MaidController::class, 'maid_details'])->middleware('auth')->name('home.maid_details');
+Route::get('/appoint', [MaidController::class, 'appoint'])->middleware('auth')->name('home.appointModal');
+

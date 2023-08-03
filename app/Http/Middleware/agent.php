@@ -15,9 +15,9 @@ class agent
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth()->user()->usertype=='agent'){
-        return $next($request);
-    }
-    abort(401);
+        if (Auth()->user()->usertype == 'agent') {
+            return $next($request);
+        }
+        abort(401);
     }
 }

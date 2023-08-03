@@ -5,6 +5,10 @@
       
       @include('home.homecss')
       <title>Maid Details</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
     </head>
    <body>
@@ -90,7 +94,121 @@ footer {
 .appoint{
     margin-top:20px;
 }
+.btn:not(:disabled):not(.disabled){
+    color:black;
+    border:#000;
+}
+.modal-open .modal .modal-content{
+    background:#fff;
+}
     </style>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Maid Hiring Form</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+          
+        
+        <form  class="form-horizontal" action="{{ url('/add_hirepost')}}" method="POST" enctype="multipart/form-data">
+
+@csrf
+
+<div class="form-group row">
+  <label class="col-sm-3 form-control-label">Name</label>
+  <div class="col-sm-9">
+    <input id="inputHorizontalSuccess" type="text" name="name" placeholder="Enter Your Name" class="form-control form-control-success" required><small class="form-text"></small>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-sm-3 form-control-label">Contact No.</label>
+  <div class="col-sm-9">
+    <input id="inputHorizontalSuccess" type="text" name="contact" placeholder="Enter Contact number" class="form-control form-control-success" required>
+  
+</div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-3 form-control-label">Age</label>
+  <div class="col-sm-9">
+    <input id="inputHorizontalSuccess" type="text" name="age" placeholder="Enter Age" class="form-control form-control-success" required>
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-3 form-control-label">Address</label>
+  <div class="col-sm-9">
+    <input id="inputHorizontalSuccess" type="text" name="address" placeholder="Enter Address to be hire" class="form-control form-control-success" required>
+  </div>
+</div>
+<div class="form-group row">
+  <label class="col-sm-3 form-control-label">Gander</label>
+  <div class="col-sm-9">
+    <input id="inputHorizontalSuccess" type="text" name="gander" placeholder="Enter gender" class="form-control form-control-success" required>
+  </div>
+</div>
+
+<div class="form-group row">
+  <label class="col-sm-3 form-control-label">National Id</label>
+  <div class="col-sm-9">
+    <input id="inputHorizontalSuccess" type="text" name="nid" placeholder="Enter you NID no" class="form-control form-control-success" required>
+  </div>
+  </div>
+
+  <div class="form-group row">
+                        <label class="col-sm-3 form-control-label">Note</label>
+                        <div class="col-sm-9">
+                          <textarea id="inputHorizontalSuccess" type="text" name="note" placeholder="Any note to be added" class="form-control form-control-success"></textarea><small class="form-text"></small>
+                        </div>
+          </div>
+
+
+  <div class="form-group row">
+                      <label class="col-sm-8 form-control-label">For how many days you want to appoint? </label>
+                        
+                      </div>
+                      <select class="form-select col-sm-4 form-control-label" name="day">
+                        <div class="col-sm-9">
+                          <option id="inputHorizontalSuccess" type="text" placeholder="Select a Service" class="form-control form-control-success" name="schedule" required></option><small class="form-text"></small>
+                          <option>1 Day</option>
+                          <option>2 Days</option>
+                          <option>7 Days</option>
+                          <option>1 Month</option>
+                          <option>2 Month</option>
+                          <option>3 Month</option>
+                          <option>4 Month</option>
+                          <option>5 Month</option>
+                          <option>1 Year</option>
+                         
+                        </div>
+                        </select>
+
+          
+</form>
+
+
+
+
+        </div>
+        <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" value="submit" data-dismiss="modal">Submit</button>
+      </div>
+      </div>
+      
+    </div>
+</div>
+
+
+
+
+
 <div class="container">
     <section class="maid-details">
      
@@ -107,7 +225,7 @@ footer {
             <p><strong>NID No:</strong> {{ $post->nid}}</p>
             <h4>Description</h4>
             <p>{{ $post->details}}</p>
-            <button class="appoint">Appoint</button>
+            <button class="appoint" data-toggle="modal" data-target="#myModal">Appoint</button>
         </div>
         
     </section>

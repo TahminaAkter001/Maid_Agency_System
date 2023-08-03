@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Maid extends Model
 {
     use HasFactory;
+
     protected $table = 'maids';
+
     protected $fillable = [
         'serv_in',
         'name',
@@ -25,8 +27,9 @@ class Maid extends Model
         'address',
 
     ];
-    public function service(){
-        return $this->belongsTo(Services::class,'serv_id','id');
-    }
-};
 
+    public function service()
+    {
+        return $this->belongsTo(Services::class, 'serv_id', 'id');
+    }
+}
