@@ -32,4 +32,6 @@ class Maid extends Model
     {
         return $this->belongsTo(Services::class, 'serv_id', 'id');
     }
+
+    
 }

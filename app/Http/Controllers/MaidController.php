@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Maid;
-use App\Models\maidHire;
+use App\Models\AppointMaid;
 use App\Models\Services;
 use Illuminate\Http\Request;
 
@@ -53,30 +53,32 @@ class MaidController extends Controller
 
         return view('home.maid_details', compact('post'));
     }
-    public function appoint()
+    public function appoint($id)
     {
-        return view('home.appointModal');
+        $post = Maid::where('id', $id)->firstOrFail();
+        return view('home.appointmaid', compact('post'));
     }
 
 
-    /********Maid hiring form */
-
-    public function add_hirepost(Request $request)
+    
+    public function store(Request $request)
     {
-        $post = new maidHire;
 
-        $post->name = $request->name;
-        $post->contact = $request->contact;
-        $post->age = $request->age;
-        $post->address = $request->address;
-        $post->gander = $request->gander;
-        $post->nid = $request->nid;
-        $post->note = $request->note;
-        $post->schedule = $request->schedule;
+        $hire = new AppointMaid;
 
-        $post->save();
+        $hire->name = $request->name;
+        $hire->contact = $request->contact;
+        $hire->age = $request->age;
+        $hire->address = $request->address;
+        $hire->gander = $request->gander;
+        $hire->nid = $request->nid;
+        $hire->note = $request->note;
+        $hire->start = $request->start;
+        $hire->day = $request->day;
 
-        return redirect()->back()->with('Saved!');
+        $hire->save();
+
+        return redirect()->back()->with('status','Saved data!');
 
     }
 

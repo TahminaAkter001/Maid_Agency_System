@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Maid;
-use App\Models\maidHire;
+
 use App\Models\Services;
 use Illuminate\Http\Request;
 

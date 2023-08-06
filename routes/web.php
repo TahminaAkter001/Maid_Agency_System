@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
 Route::get('/', [HomeController::class, 'homepage']);
 
 Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
@@ -46,22 +47,29 @@ Route::get('/addtools', [AgentAddToolController::class, 'addtools'])->middleware
 Route::post('/add_post', [AgentAddToolController::class, 'add_post'])->middleware('auth');
 Route::get('/show_post', [AgentAddToolController::class, 'show_post'])->middleware('auth');
 Route::get('/tools', [ToolsController::class, 'tools'])->middleware('auth');
-/*** agent Services */
+/* agent Services */
 Route::get('/show_service', [ServiceController::class, 'show_service'])->middleware('auth');
 Route::post('/add_spost', [ServiceController::class, 'add_spost'])->middleware('auth');
 Route::get('/add_service', [ServiceController::class, 'add_service'])->middleware('auth');
-/***Agent Maid *** */
+/*Agent Maid*/
 Route::get('/show_maid', [MaidController::class, 'show_maid'])->middleware('auth');
 Route::post('/add_mpost', [MaidController::class, 'add_mpost'])->middleware('auth');
 Route::get('/add_maid', [MaidController::class, 'add_maid'])->middleware('auth');
 
-/***cart*** */
+/*cart*/
 Route::get('/cart', [CartController::class, 'cart'])->middleware('auth');
+Route::get('/add-to-cart/{service}', [CartController::class, 'addToCart'])->middleware('auth');
+Route::get('/remove/{id}', [CartController::class, 'removeFromCart'])->middleware('auth');
 Route::get('/checkout', [CartController::class, 'checkout'])->middleware('auth');
-/**user service */
+/*user service */
 Route::get('/service_type/{slug}', [ServiceController::class, 'service_type'])->middleware('auth')->name('home.services');
 
-/**maid details */
+/*maid details */
 Route::get('/maid_details/{id}', [MaidController::class, 'maid_details'])->middleware('auth')->name('home.maid_details');
-Route::get('/appoint', [MaidController::class, 'appoint'])->middleware('auth')->name('home.appointModal');
+Route::get('/appoint', [MaidController::class, 'appoint'])->middleware('auth')->name('home.appoint_maid');
+
+Route::get('/add_appoint/{id}', [MaidController::class, 'appoint'])->name('home.appointmaid');
+Route::post('/hire_maid', [MaidController::class, 'store']);
+
+
 

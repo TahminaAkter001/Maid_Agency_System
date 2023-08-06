@@ -13,10 +13,12 @@
                 <li><a href="{{ url('/show_service')}}"> <i class="icon-grid"></i>Services </a></li>
                 <li><a href="{{ url('/show_maid')}}"> <i class="fa fa-bar-chart"></i>Maids </a></li>
                 <li><a href="{{ url('/show_post')}}"> <i class="icon-padnote"></i>Tool Management </a></li>
+                
                 <li><a href="{{ route('login')}}"> <i class="icon-logout"></i>Login page </a></li>
         </ul><span class="heading">Extras</span>
         <ul class="list-unstyled">
           <li> <a href="#"> <i class="icon-settings"></i>Demo </a></li>
+          <li> <a href="{{ url('/add_appoint') }}"> <i class="icon-padnote"></i>Appoint Management </a></li>
           <li> <a href="#"> <i class="icon-writing-whiteboard"></i>Demo </a></li>
           <li> <a href="#"> <i class="icon-chart"></i>Demo </a></li>
         </ul>
