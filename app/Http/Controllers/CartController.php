@@ -1,16 +1,14 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Maid;
 class CartController extends Controller
 {
-    public function cart()
+    public function checkout($id)
     {
-        return view('home.cart');
+        $post = Maid::where('id', $id)->firstOrFail();
+        return view('home.checkout', compact('post'));
     }
+    
 
-    public function checkout()
-    {
-        return view('home.checkout');
-    }
 }

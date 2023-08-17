@@ -179,13 +179,34 @@ span.price {
   </div>
   <div class="col-25">
     <div class="container">
-      <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>4</b></span></h4>
-      <p><a href="#">Product 1</a> <span class="price">$15</span></p>
-      <p><a href="#">Product 2</a> <span class="price">$5</span></p>
-      <p><a href="#">Product 3</a> <span class="price">$8</span></p>
-      <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+      <h4>Cart <span class="price" style="color:black"></span></h4>
+      <div class="col-lg-12">
+        <div class="block">
+          <div class="table-responsive"> 
+            <table class="table table-striped table-sm">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Image</th>
+                  <th>Pay</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr> 
+                  <td>{{ $post->name}}</td>
+                  <td>
+                    <img class="img_deg" src="Maid/{{ $post->image}}" alt="">
+                  </td>
+                  <td>{{ $post->salary}} Taka</td>
+                </tr>
+              </tbody>
+              
+            </table>
+          </div>
+        </div>
+      </div>
       <hr>
-      <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+      <p>Total <span class="price" style="color:black"><b>{{ $post->salary}} Taka</b></span></p>
     </div>
   </div>
 </div>

@@ -107,10 +107,7 @@ footer {
 
 <div class="container">
     <section class="maid-details">
-     @if(session('status')){
-        <div class="alert alert-success">{{ session('status') }}</div>
-     }
-     @endif
+     
         <div class="maid-photo">
             <img src="../Maid/{{ $post->image}}" alt="Maid Photo">
         </div>
@@ -125,6 +122,7 @@ footer {
             <h4>Description</h4>
             <p>{{ $post->details}}</p>
             <button class="appoint"><a href="{{ url('/add_appoint', ['id' => $post->id]) }}">Appoint</a> </button>
+            <button class="addCart"><a href="{{  url('/cart', ['id' => $post->id]) }}">Checkout</a> </button>
         </div>
         
     </section>

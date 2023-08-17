@@ -176,6 +176,7 @@
 </style>
 
 
+
 @include('home.header')
 
 <div class="vegetables_section layout_padding">
@@ -189,9 +190,8 @@
           <div class="col-4">
             <div class="box_section">
               <div class="image_4"><img class="img_des" src="ProductImage/{{$post->image}}"></div>
-              <h2 class="dolor_text"><span style="color: #ebc30a;">{{ $post->p_price}}</span> Taka</h2>
               <h2 class="dolor_text">{{ $post->p_name}}</h2>
-              <div class="buy_bt_1 active"><a href="#">Add Cart</a></div>
+              <div class="buy_bt_1 active"><a href="#">Borrow</a></div>
             </div>
           </div>
           

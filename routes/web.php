@@ -13,6 +13,7 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\ToolsController;
 use Illuminate\Support\Facades\Route;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,7 +28,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'homepage']);
 
-Route::get('/home', [HomeController::class, 'index'])->middleware('auth')->name('home');
+Route::get('/', [HomeController::class, 'index'])->middleware('auth')->name('home');
 
 Route::get('/home/payment', [PaymentController::class, 'payment'])->middleware('auth')->name('home.payment');
 
@@ -57,10 +58,10 @@ Route::post('/add_mpost', [MaidController::class, 'add_mpost'])->middleware('aut
 Route::get('/add_maid', [MaidController::class, 'add_maid'])->middleware('auth');
 
 /*cart*/
-Route::get('/cart', [CartController::class, 'cart'])->middleware('auth');
-Route::get('/add-to-cart/{service}', [CartController::class, 'addToCart'])->middleware('auth');
+Route::get('/cart/{id}', [CartController::class, 'checkout'])->middleware('auth')->name('home.checkout');
+Route::get('/add-to-cart/{service}', [CartController::class, 'addToCart'])->middleware('auth')->name('home.add-cart');
 Route::get('/remove/{id}', [CartController::class, 'removeFromCart'])->middleware('auth');
-Route::get('/checkout', [CartController::class, 'checkout'])->middleware('auth');
+
 /*user service */
 Route::get('/service_type/{slug}', [ServiceController::class, 'service_type'])->middleware('auth')->name('home.services');
 
@@ -70,6 +71,3 @@ Route::get('/appoint', [MaidController::class, 'appoint'])->middleware('auth')->
 
 Route::get('/add_appoint/{id}', [MaidController::class, 'appoint'])->name('home.appointmaid');
 Route::post('/hire_maid', [MaidController::class, 'store']);
-
-
-

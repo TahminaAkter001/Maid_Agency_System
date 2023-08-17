@@ -84,7 +84,7 @@
                            <a class="nav-link" href="{{ route('home') }}">Home</a>
                         </li>
                         <li class="nav-item">
-                           <a class="nav-link" href="{{ route('home') }}">Services</a>
+                           <a class="nav-link" href="">Services</a>
                            
                         </li>
                         <li class="nav-item">
@@ -140,7 +140,7 @@
                      @endif
                      @endauth
                      @endif
-                     <li><a href="{{ url('/cart') }}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Cart</a></li>
+                     
                   </ul>
                </div>
             </div>
