@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 31, 2023 at 09:57 PM
+-- Generation Time: Aug 19, 2023 at 04:33 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -45,14 +45,43 @@ CREATE TABLE `add_tools` (
 --
 
 INSERT INTO `add_tools` (`id`, `p_name`, `p_price`, `p_details`, `p_quantity`, `image`, `available`, `rent`, `created_at`, `updated_at`) VALUES
-(1, 'Gentle Foaming Hand Wash', '150', 'Enriched with Vitamin E, Kills 99.9% viruses and bacteria, Premium floral fragrance ,Moisturizes skin, Luxurious foam, Ideal for daily use and protection', '50', '1690406161 . jpg', NULL, NULL, '2023-07-26 15:16:01', '2023-07-26 15:16:01'),
-(2, 'Savlon Ocean Blue Handwash', '150', 'Enriched with Vitamin E, Kills 99.9% viruses', '50', '1690406351 . jpg', NULL, NULL, '2023-07-26 15:19:11', '2023-07-26 15:19:11'),
-(3, 'Sepnil Extra Mild Hand Wash', '95', 'Ordinary hand wash can only wash away the visible dirt or grime at most., However, your hands endure more than dirt every single day.', '100', '1690406607 . png', NULL, NULL, '2023-07-26 15:23:27', '2023-07-26 15:23:27'),
-(4, 'Broom and Dustpan', '100', 'The broom and dustpan set for home has upgrade 52\" long broom handle which allow you to stand upright for comfortable sweeping instead of bending over.', '20', '1690494665 . jpg', NULL, NULL, '2023-07-27 15:51:05', '2023-07-27 15:51:05'),
-(5, 'Broom', '20', 'The broom and dustpan set for home has upgrade 52\" long broom handle which allow you to stand upright for comfortable sweeping instead of bending over.', '50', '1690495115 . jpg', NULL, NULL, '2023-07-27 15:58:35', '2023-07-27 15:58:35'),
-(6, 'Rin Washing powder', '100', 'Rin Washing Powder emoves dirt from deep within the cloth fibre, thereby removing dullness from your clothes', '50', '1690497577 . png', NULL, NULL, '2023-07-27 16:39:37', '2023-07-27 16:39:37'),
-(7, 'Detergent', '100', 'Rin Washing Powder emoves dirt from deep within the cloth fibre.', '20', '1690497598 . jpg', NULL, NULL, '2023-07-27 16:39:58', '2023-07-27 16:39:58'),
-(8, 'Kitchen Knife', '50', 'You can cut all kind of vegetables with the knife', '100', '1690824021 . jpeg', NULL, NULL, '2023-07-31 11:20:21', '2023-07-31 11:20:21');
+(12, 'Veg Cutter', NULL, 'Vegetable cutter', '200', '1691091392 . jpg', NULL, NULL, '2023-08-03 13:36:32', '2023-08-03 13:36:32'),
+(13, 'Kitchen Knife', '50', 'You can cut all kind of vegetables with the knife', '100', '1690824021 . jpeg', NULL, NULL, '2023-07-31 11:20:21', '2023-07-31 11:20:21'),
+(14, 'Broom', NULL, 'Every Product will return with the maid.', '100', '1692388002 . jpg', NULL, NULL, '2023-08-18 13:46:42', '2023-08-18 13:46:42'),
+(15, 'Broom', NULL, 'Broom for home services', '50', '1692388127 . jpeg', NULL, NULL, '2023-08-18 13:48:47', '2023-08-18 13:48:47');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `appoint_maids`
+--
+
+CREATE TABLE `appoint_maids` (
+  `id` bigint(20) UNSIGNED NOT NULL,
+  `name` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `contact` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `age` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `address` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `gander` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nid` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `note` longtext COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `start` date NOT NULL,
+  `day` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `appoint_maids`
+--
+
+INSERT INTO `appoint_maids` (`id`, `name`, `contact`, `age`, `address`, `gander`, `nid`, `note`, `start`, `day`, `created_at`, `updated_at`) VALUES
+(1, 'Shanjeda khatun jhuma', '+880192565665', '28', 'Soyadhangora Uttar para Sirajgonj', 'Female', '226562656', 'No', '2023-08-10', '1 Month', '2023-08-06 07:27:19', '2023-08-06 07:27:19'),
+(2, 'Tahmina Akter', '0146586362', '40', 'Uttara', 'Female', '2212562632', 'No', '2023-08-10', '1 Month', '2023-08-06 07:30:26', '2023-08-06 07:30:26'),
+(3, 'Tahmina Akter', '0146586362', '40', 'Uttara', 'Female', '2212562632', 'No', '2023-08-10', '1 Month', '2023-08-06 07:31:24', '2023-08-06 07:31:24'),
+(4, 'Md Abu Rayhan Dipu', '0165265652', '40', 'Uttara, Sector 10', 'Male', '21648454556', 'No', '2023-08-22', '1 Day', '2023-08-06 07:50:02', '2023-08-06 07:50:02'),
+(5, 'Md Abu Rayhan Dipu', '0165265652', '40', 'Uttara, Sector 10', 'Male', '21648454556', 'No', '2023-08-22', '1 Day', '2023-08-06 08:03:34', '2023-08-06 08:03:34'),
+(6, 'Tahmina Akter', '+880192556955', '28', 'Soyadhangora Uttar para Sirajgonj', 'Female', '2212562632', NULL, '2023-08-17', '1 Month', '2023-08-19 07:50:39', '2023-08-19 07:50:39');
 
 -- --------------------------------------------------------
 
@@ -106,21 +135,21 @@ INSERT INTO `maids` (`id`, `serv_id`, `name`, `slug`, `age`, `nationality`, `gan
 (5, '16', 'Forida Begum', 'forida_begum', 37, 'BD', 'Female', '5 years', '+880125565223', 'Will clean home and clothes . salary will count per month.', '8000', '1690647465 . png', '5649596265', 'Mymensingh', '2023-07-29 10:17:45', '2023-07-29 10:17:45'),
 (6, '14', 'Fatema Begum', 'fatema_begum', 37, 'BD', 'Female', '7 years', '+880125565223', 'Fatema Begum is expert in cooking . You can hire her for per month. Maid must not miss any day.', '10000', '1690647746 . jpg', '65486561545', 'Baridhara, dhaka', '2023-07-29 10:22:26', '2023-07-29 10:22:26'),
 (7, '14', 'Khadija Akter', 'khadija_akter', 29, 'BD', 'Female', '2 years', '+880125565523', 'khadija Akter is expert in cook . You can hire her for per month. Maid must not miss any day.', '10500', '1690647821 . jpg', '58462154621', 'Uttara, dhaka', '2023-07-29 10:23:41', '2023-07-29 10:23:41'),
-(8, '14', 'Fulon Bibi', 'fulon_bibi', NULL, NULL, NULL, NULL, NULL, 'Fulon Bibi is expert in cook . You can hire her for per month. Maid must not miss any day.', '11000', '1690647891 . jpg', '515456523', 'Gopalgonj', '2023-07-29 10:24:51', '2023-07-29 10:24:51'),
-(9, '15', 'Jorina Akter', 'jorina_akter', NULL, NULL, NULL, NULL, NULL, 'Nanny will appointed for per month.', '25000', '1690647959 . jpg', '2145465162', 'Mymensingh', '2023-07-29 10:25:59', '2023-07-29 10:25:59'),
+(8, '14', 'Fulon Bibi', 'fulon_bibi', 37, 'Bangladeshi', 'Female', '6 years+', '+8801358456235', 'Fulon Bibi is expert in cook . You can hire her for per month. Maid must not miss any day.', '11000', '1690647891 . jpg', '515456523', 'Gopalgonj', '2023-07-29 10:24:51', '2023-07-29 10:24:51'),
+(9, '15', 'Morjina Akter', 'jorina_akter', NULL, NULL, NULL, NULL, NULL, 'Nanny will appointed for per month.', '25000', '1690647959 . jpg', '2145465162', 'Mymensingh', '2023-07-29 10:25:59', '2023-07-29 10:25:59'),
 (10, '15', 'Sokina Khatun', 'sokina_khatun', NULL, NULL, NULL, NULL, NULL, 'Nanny will appointed for per month.', '20000', '1690648005 . jpg', '254984561', 'Gopalgonj', '2023-07-29 10:26:45', '2023-07-29 10:26:45'),
 (11, '15', 'Morjina Begum', 'morjina_begum', NULL, NULL, NULL, NULL, NULL, 'Nanny will appointed for per month.', '18000', '1690648041 . jpg', '254864561', 'Uttara\r\nSector 10', '2023-07-29 10:27:21', '2023-07-29 10:27:21'),
 (12, '15', 'Aleha Begum', 'morjina_begum', NULL, NULL, NULL, NULL, NULL, 'Nanny will appointed for per month.', '18000', '1690648041 . jpg', '254864561', 'Uttara\r\nSector 10', '2023-07-29 10:27:21', '2023-07-29 10:27:21'),
 (13, '15', 'Morjina Begum', 'morjina_begum', 35, 'BD', 'Female', '5 years', '+880125565223', 'Nanny will appointed for per month.', '18000', '1690648041 . jpg', '254864561', 'Uttara\r\nSector 10', '2023-07-29 10:27:21', '2023-07-29 10:27:21'),
-(14, '14', 'Khadija Akter', 'khadija_akter', NULL, NULL, NULL, NULL, NULL, 'khadija Akter is expert in cook . You can hire her for per month. Maid must not miss any day.', '10500', '1690647821 . jpg', '58462154621', 'Uttara, dhaka', '2023-07-29 10:23:41', '2023-07-29 10:23:41'),
+(14, '14', 'Khadija Akter', 'khadija_akter', 37, 'BD', 'Female', '9 years', '+8801545623263', 'khadija Akter is expert in cook . You can hire her for per month. Maid must not miss any day.', '10500', '1690647821 . jpg', '58462154621', 'Uttara, dhaka', '2023-07-29 10:23:41', '2023-07-29 10:23:41'),
 (15, '16', 'Forida Begum', 'forida_begum', NULL, NULL, NULL, NULL, NULL, 'Will clean home and clothes . salary will count per month.', '8000', '1690647465 . png', '5649596265', 'Mymensingh', '2023-07-29 10:17:45', '2023-07-29 10:17:45'),
 (16, '14', 'Salma Akter', 'salma_akter', NULL, NULL, NULL, NULL, NULL, 'Salma akter is expert in cook . You can hire her for per month. Given salary is for per Month. Maid must not miss any day.', '10000', '1690643704 . jpg', '8422545662', 'Uttara\r\nSector 10', '2023-07-29 09:15:04', '2023-07-29 09:15:04'),
-(17, '16', 'Forida Begum', 'forida_begum', 29, 'Bd', 'Female', '2 Years', '+880125565223', 'Will clean home and clothes . salary will count per month.', '8000', '1690647465 . png', '5649596265', 'Mymensingh', '2023-07-29 10:17:45', '2023-07-29 10:17:45'),
-(18, '16', 'Forida Begum', 'forida_begum', NULL, NULL, NULL, NULL, NULL, 'Will clean home and clothes . salary will count per month.', '8000', '1690647465 . png', '5649596265', 'Mymensingh', '2023-07-29 10:17:45', '2023-07-29 10:17:45'),
+(17, '16', 'Rumi Khatun', 'rumi_khatun', 29, 'Bd', 'Female', '2 Years', '+880125565223', 'Will clean home and clothes . salary will count per month.', '8000', '1690647465 . png', '5649596265', 'Mymensingh', '2023-07-29 10:17:45', '2023-07-29 10:17:45'),
+(18, '16', 'Khaleda Begum', 'khaleda_begum', 36, 'bangladeshi', 'Female', '5 years', NULL, 'Will clean home and clothes . salary will count per month.', '8000', '1690647465 . png', '5649596265', 'Mymensingh', '2023-07-29 10:17:45', '2023-07-29 10:17:45'),
 (19, '16', 'Forida Begum', 'forida_begum', NULL, NULL, NULL, NULL, NULL, 'Will clean home and clothes . salary will count per month.', '8000', '1690647465 . png', '5649596265', 'Mymensingh', '2023-07-29 10:17:45', '2023-07-29 10:17:45'),
 (20, '17', 'Karimuddin', 'karimuddin', 40, 'Bangladeshi', 'Male', '6 years', '+880125565223', 'He will wash you car. Will pay per day.', '200', '1690647354 . png', '2652629561', 'Badda, Dhaka', '2023-07-29 10:15:54', '2023-07-29 10:15:54'),
 (21, '17', 'Sumon Mia', 'sumon-mia', 44, 'bangladeshi', 'Male', '13 years', '+880125565223', 'He will wash you car. Will pay per day.', '200', '1690647354 . png', '2652629561', 'Badda, Dhaka', '2023-07-29 10:15:54', '2023-07-29 10:15:54'),
-(22, '17', 'Karimuddin', 'karimuddin', NULL, NULL, NULL, NULL, NULL, 'He will wash you car. Will pay per day.', '200', '1690647354 . png', '2652629561', 'Badda, Dhaka', '2023-07-29 10:15:54', '2023-07-29 10:15:54'),
+(22, '17', 'Karimuddin', 'karimuddin', 29, 'BD', 'Male', '5 years+', '+8801452655626', 'He will wash you car. Will pay per day.', '200', '1690647354 . png', '2652629561', 'Badda, Dhaka', '2023-07-29 10:15:54', '2023-07-29 10:15:54'),
 (23, '17', 'Karimuddin', 'karimuddin', NULL, NULL, NULL, NULL, NULL, 'He will wash you car. Will pay per day.', '200', '1690647354 . png', '2652629561', 'Badda, Dhaka', '2023-07-29 10:15:54', '2023-07-29 10:15:54'),
 (24, '17', 'Shahed Ali', 'shahed-ali', 37, 'Bangladeshi', 'Male', '5 years', '+880125565223', 'He will wash you car. Will pay per day.', '200', '1690647354 . png', '2652629561', 'Badda, Dhaka', '2023-07-29 10:15:54', '2023-07-29 10:15:54'),
 (25, '16', 'Forida Begum', 'forida_begum', NULL, NULL, NULL, NULL, NULL, 'Will clean home and clothes . salary will count per month.', '8000', '1690647465 . png', '5649596265', 'Mymensingh', '2023-07-29 10:17:45', '2023-07-29 10:17:45'),
@@ -151,7 +180,12 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (4, '2019_12_14_000001_create_personal_access_tokens_table', 1),
 (5, '2023_07_26_192606_create_add_tools_table', 2),
 (6, '2023_07_29_061553_create_services_table', 3),
-(7, '2023_07_29_072315_create_maids_table', 4);
+(7, '2023_07_29_072315_create_maids_table', 4),
+(8, '2023_08_03_163613_create_maid_hires_table', 5),
+(9, '2023_08_03_204556_create_maid_hires_table', 6),
+(10, '2023_08_06_011431_create_maid_hires_table', 7),
+(11, '2023_08_06_030526_create_appoints_table', 8),
+(12, '2023_08_06_132455_create_appoint_maids_table', 9);
 
 -- --------------------------------------------------------
 
@@ -235,7 +269,11 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `usertype`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'User', 'user@gmail.com', NULL, '$2y$10$MpwtC5KOit.MdsxmZAoKGO2MYUWwYuV2iOQO2TpkyluRw.lTdin6W', 'user', NULL, '2023-07-24 02:51:27', '2023-07-24 02:51:27'),
-(2, 'Agent', 'agent@gmail.com', NULL, '$2y$10$v1AqenSTOA7iaIXY.nqUJecXvaWcH6IJZJZfvHsUOjJjzhEdp4Wjq', 'agent', NULL, '2023-07-24 05:21:29', '2023-07-24 05:21:29');
+(2, 'Agent', 'agent@gmail.com', NULL, '$2y$10$v1AqenSTOA7iaIXY.nqUJecXvaWcH6IJZJZfvHsUOjJjzhEdp4Wjq', 'agent', NULL, '2023-07-24 05:21:29', '2023-07-24 05:21:29'),
+(3, 'Tahmina', 'tahmina@gmail.com', NULL, '$2y$10$MpwtC5KOit.MdsxmZAoKGO2MYUWwYuV2iOQO2TpkyluRw.lTdin6W', 'user', NULL, '2023-07-24 02:51:27', '2023-07-24 02:51:27'),
+(4, 'Toma', 'toma@gmail.com', NULL, '$2y$10$MpwtC5KOit.MdsxmZAoKGO2MYUWwYuV2iOQO2TpkyluRw.lTdin6W', 'user', NULL, '2023-07-24 02:51:27', '2023-07-24 02:51:27'),
+(5, 'Samia', 'samia@gmail.com', NULL, '$2y$10$MpwtC5KOit.MdsxmZAoKGO2MYUWwYuV2iOQO2TpkyluRw.lTdin6W', 'user', NULL, '2023-07-24 02:51:27', '2023-07-24 02:51:27'),
+(6, 'Sadia', 'sadia@gmail.com', NULL, '$2y$10$MpwtC5KOit.MdsxmZAoKGO2MYUWwYuV2iOQO2TpkyluRw.lTdin6W', 'user', NULL, '2023-07-24 02:51:27', '2023-07-24 02:51:27');
 
 --
 -- Indexes for dumped tables
@@ -245,6 +283,12 @@ INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `us
 -- Indexes for table `add_tools`
 --
 ALTER TABLE `add_tools`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `appoint_maids`
+--
+ALTER TABLE `appoint_maids`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -303,7 +347,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `add_tools`
 --
 ALTER TABLE `add_tools`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- AUTO_INCREMENT for table `appoint_maids`
+--
+ALTER TABLE `appoint_maids`
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `failed_jobs`
@@ -321,7 +371,7 @@ ALTER TABLE `maids`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `personal_access_tokens`
@@ -339,7 +389,7 @@ ALTER TABLE `services`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
