@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\DB;
 use App\Models\AddTool;
 use Illuminate\Http\Request;
 
@@ -38,4 +38,5 @@ class AgentAddToolController extends Controller
         return redirect()->back();
 
     }
+    
 }

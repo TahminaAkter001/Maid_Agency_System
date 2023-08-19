@@ -44,7 +44,30 @@
       </div>
       <!-- services section end -->
       <!-- about section start -->
-      @include('home.about')
+      <style>
+         .about_img{
+            height:600px;
+            width:600px;
+            margin-left:20px;
+         }
+      </style>
+      
+      <div class="about_section layout_padding">
+               <div class="container-fluid">
+                  <div class="row">
+                     <div class="col-md-6">
+                        <div class="about_taital_main">
+                           <h1 class="about_taital">About Us</h1>
+                           <p class="about_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. <br><br>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. </p>
+                           
+                        </div>
+                     </div>
+                     <div class="col-md-6 padding_right_0">
+                        <div><img src="../images/Maid_Philippines.jpg" class="about_img"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
       <!-- about section end -->
       @include('home.contact')
       <!-- footer section start -->

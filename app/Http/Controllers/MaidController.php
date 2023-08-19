@@ -16,6 +16,14 @@ class MaidController extends Controller
         return view('agent.maids', compact('post'));
     }
 
+
+    public function appointed_maid()
+    {
+        $post = AppointMaid::all();
+
+        return view('agent.appointed', compact('post'));
+    }
+
     public function add_maid()
     {
         $service = Services::all();

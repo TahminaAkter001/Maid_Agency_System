@@ -191,7 +191,7 @@
             <div class="box_section">
               <div class="image_4"><img class="img_des" src="ProductImage/{{$post->image}}"></div>
               <h2 class="dolor_text">{{ $post->p_name}}</h2>
-              <div class="buy_bt_1 active"><a href="#">Borrow</a></div>
+              <div class="buy_bt_1 active"><a href="{{  url('/borrow', ['id' => $post->id]) }}">Borrow</a></div>
             </div>
           </div>
           

@@ -11,8 +11,10 @@
         <ul class="list-unstyled">
                 <li class="active"><a href="{{ route('home')}}"> <i class="icon-home"></i>Home </a></li>
                 <li><a href="{{ url('/show_service')}}"> <i class="icon-grid"></i>Services </a></li>
-                <li><a href="{{ url('/show_maid')}}"> <i class="fa fa-bar-chart"></i>Maids </a></li>
+                <li><a href="{{ url('/show_maid')}}"> <i class="icon icon-user"></i>Maids </a></li>
                 <li><a href="{{ url('/show_post')}}"> <i class="icon-padnote"></i>Tool Management </a></li>
+                <li><a href="{{ url('/borrow_req')}}"> <i class="icon icon-check"></i>Borrow request </a></li>
+                <li><a href="{{ url('/appointed_maid')}}"> <i class="icon icon-check"></i>Appointment </a></li>
                 
                 <li><a href="{{ route('login')}}"> <i class="icon-logout"></i>Login page </a></li>
         </ul><span class="heading">Extras</span>

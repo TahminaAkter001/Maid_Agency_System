@@ -30,7 +30,7 @@ Route::get('/', [HomeController::class, 'homepage']);
 
 Route::get('/', [HomeController::class, 'index'])->middleware('auth')->name('home');
 
-Route::get('/home/payment', [PaymentController::class, 'payment'])->middleware('auth')->name('home.payment');
+Route::get('/home/about', [HomeController::class, 'about'])->middleware('auth')->name('home.about');
 
 
 /*Route::get('/dashboard', function () {
@@ -71,3 +71,10 @@ Route::get('/appoint', [MaidController::class, 'appoint'])->middleware('auth')->
 
 Route::get('/add_appoint/{id}', [MaidController::class, 'appoint'])->name('home.appointmaid');
 Route::post('/hire_maid', [MaidController::class, 'store']);
+/***borrow request */
+Route::get('/borrow/{id}', [ToolsController::class, 'borrow'])->middleware('auth')->name('home.tools');
+
+Route::get('/borrow_req', [ToolsController::class, 'index'])->name('agent.borrow_req');
+Route::get('/appointed_maid', [MaidController::class, 'appointed_maid'])->name('agent.appointed');
+Route::get('/borrow_req/{id}/approve', [ToolsController::class, 'approveRequest']);
+Route::get('/borrow_req/{id}/reject', [ToolsController::class, 'rejectRequest']);
